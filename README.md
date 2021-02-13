@@ -105,7 +105,7 @@ Estudos e conceitos aprendidos na plataforma Alura, no curso ['Git e GitHub: Con
 
 ``git init`` : inicializa um conceito do Git chamado de __repositório Git__.
 
-``tracked`` ou ``untracked`` : basicamente é um conceito que estabelece se o repositório Git __tem ciência da existência (tracked)__ ou __não (untracked) __sobre os arquivos que estão dentro do repositório.
+``tracked`` ou ``untracked`` : basicamente é um conceito que estabelece se o repositório Git __tem ciência da existência (tracked)__ ou __não (untracked) __ sobre os arquivos que estão dentro do repositório.
 
 Os arquivos __tracked__ podem ter __3 diferentes estados__ :
 
@@ -122,7 +122,7 @@ O repositório basicamente é onde está armazenado todo o seu projeto, com toda
 - Servidor (GitHub) 
 - Ambiente de desenvolvimento (Git)
 
-No ambiente de desenvolvimento temos __3 níveis de repositórios__ ( Working Directory, Staging Area e Local Repository ) . Os __arquivos ficam se alternando entre os 3 níveis__.
+No ambiente de desenvolvimento temos __3 níveis de repositórios__ (Working Directory, Staging Area e Local Repository) . Os __arquivos ficam se alternando entre os 3 níveis__.
 
 Quando temos uma pasta e arquivos sem inicializar um repositório Git , estamos no nível __working directory (diretório de trabalho)__.
 
