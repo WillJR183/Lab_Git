@@ -24,42 +24,44 @@ Estudos e conceitos aprendidos na plataforma Alura, no curso ['Git e GitHub: Con
 ### Navegação via command line interface (CLI)
 
 No __Windows__ ( derivado do Shell ) 
-> cd : entra em diretórios
+``` sh
+cd : entra em diretórios 
 
-> dir : lista diretórios
+dir : lista diretórios
 
-> mkdir : cria diretórios
+mkdir : cria diretórios
 
-> del : remove arquivos / arquivos dentro de pastas
+del : remove arquivos / arquivos dentro de pastas
 
-> rmdir : remove pastas / diretórios 
+rmdir : remove pastas / diretórios 
 
-> echo : exibe no terminal
+echo : exibe no terminal
 
-> ( > ) : redirecionador de fluxo
+( > ) : redirecionador de fluxo
 
-> echo "teste" > teste.txt : cria o arquivo teste.txt e preenche com teste
+echo "teste" > teste.txt : cria o arquivo teste.txt e preenche com teste
+```
 
 > cls : limpa o terminal
 
 No __Linux__ ( derivado do bash ) : 
-> cd : entra em diretórios
+``` bash
+cd : entra em diretórios
 
-> ls : lista diretórios
+ls : lista diretórios
 
-> mkdir : cria diretórios
+mkdir : cria diretórios
 
-> rm -rf  : remove pastas
+rm -rf  : remove pastas
 
-> clear : limpa a tela
+clear : limpa a tela
 
-> echo : exibe no terminal
+echo : exibe no terminal
 
-> ( > ) : redirecionador de fluxo
+( > ) : redirecionador de fluxo
 
-> echo "teste" > teste.txt : cria o arquivo teste.txt e preenche com teste
-
-
+echo "teste" > teste.txt : cria o arquivo teste.txt e preenche com teste
+```
 
 Repositório: basicamente é onde está armazenado todo o seu projeto, com todas as branches e arquivos. Esse repositório fica armazenado
 em um servidor Git, geralmente na nuvem, em serviços como o GitHub. Quando vamos trabalhar nesse projeto, devemos antes fazer uma cópia local do
