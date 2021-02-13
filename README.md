@@ -40,9 +40,9 @@ echo : exibe no terminal
 ( > ) : redirecionador de fluxo
 
 echo "teste" > teste.txt : cria o arquivo teste.txt e preenche com teste
-```
 
-> cls : limpa o terminal
+cls : limpa o terminal
+```
 
 No __Linux__ ( derivado do bash ) : 
 ``` bash
@@ -62,6 +62,35 @@ echo : exibe no terminal
 
 echo "teste" > teste.txt : cria o arquivo teste.txt e preenche com teste
 ```
+
+## Entendendo como o Git funciona por baixo dos panos
+
+### Conceitos Importantes que envolvem o Git
+
+- __SHA1__ ( Secure Hash Algorithm ) 
+- __Objetos fundamentais__ (Blobs , Trees e Commits)
+- __Sistema distribuído__
+
+#### SHA1
+
+- É um conjunto de __funções hash criptográficas__ projetadas pela NSA.
+- A __encriptação__ gera um conjunto de __caracteres identificador__ de __40 dígitos__.
+- É uma forma curta de representar um arquivo.
+- Comando que gera o __SHA1__ : ` openssl sha1 + arquivo.txt `
+- Quando alteramos a informação no arquivo e executamos o comando, ele gera uma nova __chave SHA1__.
+- Se alterarmos a informação no arquivo para a que estava anteriormente e executar o comando __SHA1__ novamente, ele retorna para a __chave anterior__.
+
+#### Objetos fundamentais
+
+- Blobs : São os __objetos do Git__ que __guardam__ nossos __arquivos__ realizando o __hash SHA1__, mas também com base em metadados (nome, tipo , tamanho etc) de cada arquivo.
+- Trees : São __objetos conhecidos como árvores__ ( estruturas de pastas ) , são responsáveis por __construir toda a estrutura de arquivos__, sendo recursiva. As trees possuem a __própria assinatura hash SHA1__ , além de encapsular os blobs, contendo inclusive o nome de cada blob ( arquivo ). 
+ - Commits : São os __principais objetos do Git__ ,  são eles que vão __juntar tudo e dar sentido a alguma alteração__. Os commits apontam para uma árvore, parente (último commit) , autor , mensagem e timing. Os __commits__ também __possuem uma assinatura hash SHA1__.
+
+#### Sistema distribuído seguro
+
+- Seus __objetos__ estão __ligados__ de maneira __encadeada__ e de difícil alteração. Um sistema distribuído é um __sistema que possui múltiplas cópias de si mesmo em diferentes locais__.
+
+  
 
 Repositório: basicamente é onde está armazenado todo o seu projeto, com todas as branches e arquivos. Esse repositório fica armazenado
 em um servidor Git, geralmente na nuvem, em serviços como o GitHub. Quando vamos trabalhar nesse projeto, devemos antes fazer uma cópia local do
