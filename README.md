@@ -101,13 +101,74 @@ Estudos e conceitos aprendidos na plataforma Alura, no curso ['Git e GitHub: Con
         - `git commit -m "algo"` : salva os arquivos (snapshot) e adiciona uma mensagem.
     - `git status` : exibe o estado atual do repositório.
 
-``git log``: Serve para mostrar um histórico de alterações (commits) em forma de logs, com diversas informações, podendo ter uma série de parâmetros para que seja customizado as informações e a maneira que é visualizado. Utilize ``git log --help`` para saber mais sobre os [parâmetros.](https://devhints.io/git-log)
+### Ciclo de vida dos arquivos Git 
 
+``git init`` : inicializa um conceito do Git chamado de __repositório Git__.
 
+``tracked`` ou ``untracked`` : basicamente é um conceito que estabelece se o repositório Git __tem ciência da existência (tracked)__ ou __não (untracked) __sobre os arquivos que estão dentro do repositório.
 
-Repositório: basicamente é onde está armazenado todo o seu projeto, com todas as branches e arquivos. Esse repositório fica armazenado em um servidor Git, geralmente na nuvem, em serviços como o GitHub. Quando vamos trabalhar nesse projeto, devemos antes fazer uma cópia local do
-repositório na nossa máquina.
+Os arquivos __tracked__ podem ter __3 diferentes estados__ :
 
-Árvore do Git: quando inicializamos um repositório Git, automaticamente é criada uma árvore (tree). Sendo que o código inicial do projeto é conhecido como galho (branch). Ao trabalhar no projeto, podemos criar outras branches a partir da branch inicial, e toda modificação realizada, será refletida somente na branch estendida, sem modificar a branch pai (main/master).
+- __unmodified__ : arquivos que ainda não foram modificados.
 
-Commit: são uma espécie de checkpoints, que servem para indicar que houve mudanças em nosso código. É uma boa prática acompanhar o commit uma pequena mensagem descritiva, que informa exatamente o que foi alterado.
+- __modified__ : arquivos que foram modificados.
+
+- __staged__ : arquivos preparados para o commit.
+
+Os arquivos "commitados" voltam ao estado de unmodified, __isso é um ciclo__. O commit é uma espécie de __snapshot__ do momento dos arquivos.
+
+O repositório basicamente é onde está armazenado todo o seu projeto, com todas as branches e arquivos. Esse repositório fica armazenado em um servidor Git, geralmente na nuvem, em serviços como o GitHub. Quando vamos trabalhar nesse projeto, devemos antes fazer uma cópia local do repositório na nossa máquina. __Repositórios são divididos em 2 tipos__ : 
+
+- Servidor (GitHub) 
+- Ambiente de desenvolvimento (Git)
+
+No ambiente de desenvolvimento temos __3 níveis de repositórios__ ( Working Directory, Staging Area e Local Repository ) . Os __arquivos ficam se alternando entre os 3 níveis__.
+
+Quando temos uma pasta e arquivos sem inicializar um repositório Git , estamos no nível __working directory (diretório de trabalho)__.
+
+Quando inicializamos um repositório Git naquele working directory, os arquivos passam para a __staging area (área de preparação)__ , onde podemos __modificar os arquivos e commitar__. Basicamente os arquivos vão estar na staging area quando criados, modificados ou adicionado ao repositório Git
+
+Quando realizamos um commit, basicamente o Git pega o snapshot dos arquivos e joga no __local repository (repositório local)__, ou seja, o repositório local é __composto por commits__, onde podemos envia-los para um repositório remoto.
+
+## Introdução ao GitHub
+
+#### Visão geral
+
+O GitHub é uma plataforma de hospedagem de código fonte e arquivos, e usa como controlador de versionamento o sistema Git.
+
+#### Configuração 
+
+- Comandos para configurar seu perfil no Git :
+    - ``git config --global --unset user.email`` : para limpar o seu e-mail no perfil.
+    - ``git config --global --unset user.nickname`` : para limpar o seu username no perfil.
+    - ``git config --list`` : para ver a lista de configurações
+    - ``git config --global user.email "seu email"`` : para adicionar o seu e-mail no perfil
+    - ``git config --global user.nickname "seu nome"`` : para adicionar o seu username no perfil
+
+- Configuração do seu repositório no Git :
+    - Copiamos o caminho HTML do nosso repositório, que o GitHub vai dar e colocamos no Git.
+    - ``git remote add origin`` : ( origin -> link do seu repositório GitHub) : comando para adicionar seu repositório do GitHub à sua maquina local.
+    - ``origin`` : apelido do seu link repositório.
+    - ``git remote -v`` : lista seus repositórios remotos.
+    - ``git push origin master`` : empurra seu repositório local para o remoto.
+
+#### Resolvendo conflitos
+
+Como os conflitos acontecem no GitHub e como resolve-los :
+   - Os conflitos ocorrem quando duas ou mais pessoas editam a mesma linha de código, dessa maneira é necessário analisarmos as alterações e fazer correções manuais.
+        - ``git pull origin master`` : puxa o conteúdo do seu repositório remoto
+        - Assim que puxamos o conteúdo , devemos verificar as modificações e fazer as devidas alterações e depois podemos subir ( push ) as alterações para o GitHub novamente.
+
+- Como clonar um repositório público do GitHub na sua maquina : 
+
+     - Entre em algum repositório público e clique no botão CODE
+
+     - Copie esse link e vá no seu terminal Git e faça :  ``git clone ( link )``
+
+### Outros comandos e complementos
+
+``git log``: Serve para mostrar um histórico de alterações (commits) em forma de logs, com diversas informações, podendo ter uma série de parâmetros para que seja customizado, as informações e a maneira que é visualizado. Utilize ``git log --help`` para saber mais sobre.
+
+__Árvore do Git__: quando inicializamos um repositório Git, automaticamente é criada uma __árvore (tree)__. Sendo que o código inicial do projeto é conhecido como __galho (branch)__. Ao trabalhar no projeto, podemos criar outras branches a partir da branch inicial, e toda modificação realizada, será refletida somente na branch estendida, sem modificar a branch pai (main/master).
+
+__Commits__: são uma espécie de checkpoints, que servem para indicar que houve mudanças em nosso código. É uma boa prática acompanhar o commit uma pequena mensagem descritiva, que informa exatamente o que foi alterado.
