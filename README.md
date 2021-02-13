@@ -1,24 +1,65 @@
-# Lab_Git
+# Laboratório Git e GitHub
 
-Estudos e conceitos aprendidos na plataforma Alura, no curso de 'Git e Github: Controle e Compartilhe seu código.'
+### Visão geral
 
-link: https://cursos.alura.com.br/course/git-github-controle-de-versao
+Estudos e conceitos aprendidos na plataforma Alura, no curso ['Git e GitHub: Controle e Compartilhe seu código.'](https://cursos.alura.com.br/course/git-github-controle-de-versao) E também aprendidos no bootcamp Impulso FullStack Developer pela plataforma Digital Innovation One no curso ['Introdução ao Git e ao GitHub'.](https://web.digitalinnovation.one/course/introducao-ao-git-e-ao-github/learning/75b9fe49-6ed4-4480-83a7-7e37fc356aa9/)
 
-O Git é um __sistema de controle de versão__ (VCS), que tem por objetivo gerenciar o versionamento de repositórios. Através da sua arquitetura
-distribuída permite que cada desenvolvedor tenha uma cópia local do repositório do projeto, isso permite o trabalho em equipe de forma segura
-e também o trabalho de modo offline. O Git possui um histórico de modificações que podem ser restauradas a qualquer momento. Existem outros
-sistemas de controle de versão, como por exemplo o Mercurial e o SVN, porém o Git é o mais usado.
+### O que é o Git ?
 
-__Características do Git:__
+- O Git é um __sistema de controle de versão distribuído__ (DVCS), que foi criado em __2005__, por __Linus Torvalds__ durante o desenvolvimento do kernel __Linux__ para resolver o problema de __versionamento colaborativo__. 
 
-- Permite organizar o trabalho em equipe, mantendo as alterações nos arquivos em um servidor específico.
-- Permite o armazenamento e acesso a um histórico de modificações.
+- O Git não foi o sistema pioneiro no versionamento, porém foi o que __supriu as necessidades__ e hoje é o __sistema padrão do mercado__. 
+- Através da sua __arquitetura distribuída__ permite que cada desenvolvedor tenha uma __cópia local do repositório do projeto__, isso permite o __trabalho em equipe de forma segura__. 
+- O Git possui um __histórico de modificações__ que podem ser __restauradas__ a qualquer momento. 
+- Uma vez que temos um __sistema de versionamento__, precisamos __guardar os códigos__, e assim surgiu as empresas que provém __repositórios online__, como o __GitHub__.
 
-__Instalação do Git:__
+### Benefícios em aprender e dominar o Git e GitHub
 
-link: https://git-scm.com/downloads
+- Possibilita o controle de versão ( Git )
+- Permite o armazenamento em nuvem ( Git Hub )
+- Possibilita o trabalho em equipe ( Git / GitHub )
+- Proporciona melhorar o seu código , através de experiências com a comunidade ( GitHub )
+- Viabiliza o reconhecimento na comunidade ( GitHub )
 
-__Conceitos do Git:__
+### Navegação via command line interface (CLI)
+
+No __Windows__ ( derivado do Shell ) 
+> cd : entra em diretórios
+
+> dir : lista diretórios
+
+> mkdir : cria diretórios
+
+> del : remove arquivos / arquivos dentro de pastas
+
+> rmdir : remove pastas / diretórios 
+
+> echo : exibe no terminal
+
+> ( > ) : redirecionador de fluxo
+
+> echo "teste" > teste.txt : cria o arquivo teste.txt e preenche com teste
+
+> cls : limpa o terminal
+
+No __Linux__ ( derivado do bash ) : 
+> cd : entra em diretórios
+
+> ls : lista diretórios
+
+> mkdir : cria diretórios
+
+> rm -rf  : remove pastas
+
+> clear : limpa a tela
+
+> echo : exibe no terminal
+
+> ( > ) : redirecionador de fluxo
+
+> echo "teste" > teste.txt : cria o arquivo teste.txt e preenche com teste
+
+
 
 Repositório: basicamente é onde está armazenado todo o seu projeto, com todas as branches e arquivos. Esse repositório fica armazenado
 em um servidor Git, geralmente na nuvem, em serviços como o GitHub. Quando vamos trabalhar nesse projeto, devemos antes fazer uma cópia local do
@@ -35,8 +76,7 @@ Merge:
 
 __Comandos do Git:__
 
-```git init```: Serve para inicializar um repositório no diretório em que o comando for executado. A partir deste comando, o Git poderá gerenciar
-as modificações realizadas nos arquivos.
+```git init```: Serve para inicializar um repositório no diretório em que o comando for executado. A partir deste comando, o Git poderá gerenciar as modificações realizadas nos arquivos.
 
 ```git status```: Serve para mostrar o estado atual do nosso repositório, ou seja, indica quais arquivos foram alterados, entre outras informações.
 
