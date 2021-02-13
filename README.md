@@ -23,45 +23,44 @@ Estudos e conceitos aprendidos na plataforma Alura, no curso ['Git e GitHub: Con
 
 ### Navegação via command line interface (CLI)
 
-No __Windows__ ( derivado do Shell ) 
-``` sh
-cd : entra em diretórios 
+##### No __Windows__ ( derivado do Shell )
 
-dir : lista diretórios
+``cd ``: entra em diretórios 
 
-mkdir : cria diretórios
+``dir``: lista diretórios
 
-del : remove arquivos / arquivos dentro de pastas
+``mkdir`` : cria diretórios
 
-rmdir : remove pastas / diretórios 
+``del`` : remove arquivos / arquivos dentro de pastas
 
-echo : exibe no terminal
+``rmdir`` : remove pastas / diretórios 
 
-( > ) : redirecionador de fluxo
+``echo`` : exibe no terminal
 
-echo "teste" > teste.txt : cria o arquivo teste.txt e preenche com teste
+`` >``  : redirecionador de fluxo
 
-cls : limpa o terminal
-```
+``echo "teste" > teste.txt`` : cria o arquivo teste.txt e preenche com teste
 
-No __Linux__ ( derivado do bash ) : 
-``` bash
-cd : entra em diretórios
+``cls`` : limpa o terminal
 
-ls : lista diretórios
+##### No __Linux__ ( derivado do bash )
 
-mkdir : cria diretórios
+``cd`` : entra em diretórios
 
-rm -rf  : remove pastas
+``ls`` : lista diretórios
 
-clear : limpa a tela
+``mkdir`` : cria diretórios
 
-echo : exibe no terminal
+``rm -rf``  : remove pastas
 
-( > ) : redirecionador de fluxo
+``clear`` : limpa a tela
 
-echo "teste" > teste.txt : cria o arquivo teste.txt e preenche com teste
-```
+``echo`` : exibe no terminal
+
+``>`` : redirecionador de fluxo
+
+``echo "teste" > teste.txt`` : cria o arquivo teste.txt e preenche com teste
+
 
 ## Entendendo como o Git funciona por baixo dos panos
 
@@ -90,33 +89,25 @@ echo "teste" > teste.txt : cria o arquivo teste.txt e preenche com teste
 
 - Seus __objetos__ estão __ligados__ de maneira __encadeada__ e de difícil alteração. Um sistema distribuído é um __sistema que possui múltiplas cópias de si mesmo em diferentes locais__.
 
-  
+### Iniciando o Git e criando um commit
 
-Repositório: basicamente é onde está armazenado todo o seu projeto, com todas as branches e arquivos. Esse repositório fica armazenado
-em um servidor Git, geralmente na nuvem, em serviços como o GitHub. Quando vamos trabalhar nesse projeto, devemos antes fazer uma cópia local do
+- criando um repositório
+    - `git init` : inicializa um repositório Git .
+    - `git add` : adiciona arquivos ao repositório.
+        - `git add + nome_arquivo` : adiciona um arquivo ao repositório.
+        - `git add *`  : adiciona todos os arquivos untracked ao repositório.
+        - `git add .`   : adiciona todas as alterações do repositório local para stage area (prontos para commitar).
+    - `git commit` : salva arquivos (checkpoint)
+        - `git commit -m "algo"` : salva os arquivos (snapshot) e adiciona uma mensagem.
+    - `git status` : exibe o estado atual do repositório.
+
+``git log``: Serve para mostrar um histórico de alterações (commits) em forma de logs, com diversas informações, podendo ter uma série de parâmetros para que seja customizado as informações e a maneira que é visualizado. Utilize ``git log --help`` para saber mais sobre os [parâmetros.](https://devhints.io/git-log)
+
+
+
+Repositório: basicamente é onde está armazenado todo o seu projeto, com todas as branches e arquivos. Esse repositório fica armazenado em um servidor Git, geralmente na nuvem, em serviços como o GitHub. Quando vamos trabalhar nesse projeto, devemos antes fazer uma cópia local do
 repositório na nossa máquina.
 
-Árvore do Git: quando inicializamos um repositório Git, automaticamente é criada uma árvore(tree). Sendo que o código inicial do projeto é conhecido
-como galho(branch). Ao trabalhar no projeto, podemos criar outras branches a partir da branch inicial, e toda modificação realizada, será refletida
-somente na branch estendida, sem modificar a branch pai(main).
+Árvore do Git: quando inicializamos um repositório Git, automaticamente é criada uma árvore (tree). Sendo que o código inicial do projeto é conhecido como galho (branch). Ao trabalhar no projeto, podemos criar outras branches a partir da branch inicial, e toda modificação realizada, será refletida somente na branch estendida, sem modificar a branch pai (main/master).
 
-Commit: são uma espécie de checkpoints, que servem para indicar que houve mudanças em nosso código. É uma boa prática acompanhar o commit uma pequena
-mensagem descritiva, que informa exatamente o que foi alterado.
-
-Merge:
-
-__Comandos do Git:__
-
-```git init```: Serve para inicializar um repositório no diretório em que o comando for executado. A partir deste comando, o Git poderá gerenciar as modificações realizadas nos arquivos.
-
-```git status```: Serve para mostrar o estado atual do nosso repositório, ou seja, indica quais arquivos foram alterados, entre outras informações.
-
-```git add```: Serve para incluir os arquivos para que o git possa monitorar.
-
-```git commit -m```: Serve para commitar(realizar um checkpoint) nas mudanças que foram realizadas. O parametro __-m__ serve para adicionar uma mensagem junto ao commit.
-por exemplo, ```git commit -m "CSS personalizado adicionado"```.
-
-```git log```: Serve para mostrar um histórico de alterações(commits) em forma de logs, com diversas informações, podendo ter uma série de parametros para que seja customizado
-as informações e a maneira que é vizualizado. Utilize __git log --help__ para saber mais sobre os parametros ou acesse: https://devhints.io/git-log
-
-
+Commit: são uma espécie de checkpoints, que servem para indicar que houve mudanças em nosso código. É uma boa prática acompanhar o commit uma pequena mensagem descritiva, que informa exatamente o que foi alterado.
