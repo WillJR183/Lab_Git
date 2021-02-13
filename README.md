@@ -105,7 +105,7 @@ Estudos e conceitos aprendidos na plataforma Alura, no curso ['Git e GitHub: Con
 
 ``git init`` : inicializa um conceito do Git chamado de __repositório Git__.
 
-``tracked`` ou ``untracked`` : basicamente é um conceito que estabelece se o repositório Git __tem ciência da existência (tracked)__ ou __não (untracked) __ sobre os arquivos que estão dentro do repositório.
+``tracked`` ou ``untracked`` : basicamente é um conceito que estabelece se o repositório Git __tem ciência da existência (tracked)__ ou __não (untracked)__ sobre os arquivos que estão dentro do repositório.
 
 Os arquivos __tracked__ podem ter __3 diferentes estados__ :
 
